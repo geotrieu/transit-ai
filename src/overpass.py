@@ -1,9 +1,8 @@
 import overpy
-import inspect
 api = overpy.Overpass()
 
-quick_c = [43.75453102373179,-79.30420406128427,43.74657570660966,-79.28936830192336]
-#quick_c is quick coordinate, paste in two coordinates and it will be re-ordered for OSM as the bounding box
+quick_c = [43.6367540538917, -79.5086528971227, 43.63242876197476, -79.50096042252115]
+#quick_c is quick coordinate, paste in two coordinates into the list above and it will be re-ordered for OSM as the bounding box
 if quick_c[2] < quick_c[0]:
     t = quick_c[0]
     quick_c[0] = quick_c[2]
@@ -15,12 +14,17 @@ if quick_c[3] < quick_c[1]:
 
 print(quick_c)
 
-result = api.query(f"""
-    node({quick_c[0]},{quick_c[1]},{quick_c[2]},{quick_c[3]})["highway"="bus_stop"];
+query = f"""
+    node({quick_c[0]},{quick_c[1]},{quick_c[2]},{quick_c[3]})["amenity"="school"];
     out;
-    """)
+    """
+
+print(query)
+result = api.query(query)
 # result = api.query("node(50.745,7.17,50.75,7.18);out;")
-print(result.nodes)
-for x in result.nodes:
-    #print(x.__dict__)
-    print(f"{x.lat},{x.lon} {x.tags['name']}")
+with open("output.txt", "w") as f:
+    for x in result.nodes:
+        #print(x.__dict__)
+        if 'name' in x.tags:
+            f.write(f"{x.lat},{x.lon} {x.tags['name']}\n")
+            #print(f"{x.lat},{x.lon} {x.tags['name']}")
