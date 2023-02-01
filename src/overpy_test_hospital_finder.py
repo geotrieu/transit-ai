@@ -27,16 +27,13 @@ def get_input():
 # The values are, in order: southern-most latitude, western-most longitude, northern-most latitude, eastern-most
 # longitude.
 def get_hospital_query_bbox(user_input):
-    query = """[out:json][timeout:180];(node["amenity"="hospital"](""" + user_input[0] + ',' + user_input[1] + ',' + \
-            user_input[2] + ',' + user_input[3] + """););out body;>;out skel qt;"""
+    query = f"""[out:json][timeout:180];(node["amenity"="hospital"]({user_input[0]}, {user_input[1]}, {user_input[2]}, {user_input[3]}););out body;>;out skel qt;"""
     return query
 
 
 # circle and radius
 def get_hospital_query_rad(user_input):
-    query = """[out:json][timeout:180];(node["amenity"="college"](around:""" + user_input[6] + ',' + user_input[
-        4] + ',' + \
-            user_input[5] + """););out body;>;out skel qt;"""
+    query = f"""[out:json][timeout:180];(node["amenity"="college"](around: {user_input[6]}, {user_input[4]}, {user_input[5]}););out body;>;out skel qt;"""
     return query
 
 
