@@ -15,18 +15,10 @@ if quick_c[3] < quick_c[1]:
 print(quick_c)
 
 query = f"""
-    [out:json];
-    area[name="Markham"];
-    node({quick_c[0]},{quick_c[1]},{quick_c[2]},{quick_c[3]})(area)["amenity"="restaurant"];
-    out;
+    area[name="Seattle"]["is_in:state_code"="WA"];foreach(out;);
     """
 
 print(query)
 result = api.query(query)
 #result = api.query("node(50.745,7.17,50.75,7.18);out;")
-with open("output.txt", "w", encoding='utf-8') as f:
-    for x in result.nodes:
-        #print(x.__dict__)
-        if 'name' in x.tags:
-            f.write(f"{x.lat},{x.lon} {x.tags['name']}\n")
-            #print(f"{x.lat},{x.lon} {x.tags['name']}")
+print(dir(result))
