@@ -1,4 +1,5 @@
 import overpy
+import pandas as pd
 api = overpy.Overpass()
 
 class city_amenity_grabber:
@@ -33,12 +34,22 @@ class city_amenity_grabber:
 
         result = api.query(query)
         #result = api.query("node(50.745,7.17,50.75,7.18);out;")
+        lat = []
+        lon = []
         with open("output.txt", "w", encoding='utf-8') as f:
             for x in result.nodes:
                 #print(x.__dict__)
                 if 'name' in x.tags:
                     f.write(f"{x.lat},{x.lon} {x.tags['name']}\n")
+                    lat.append(x.lat)
+                    lon.append(x.lon)
                     #print(f"{x.lat},{x.lon} {x.tags['name']}")
+        self.return_df(lat,lon)
+
+    def return_df(self,lat,lon):
+        d = {"lat": lat, "lon": lon}
+        df = pd.DataFrame(data=d)
+        print(df)
 
 if __name__ == "__main__":
     p = city_amenity_grabber()
