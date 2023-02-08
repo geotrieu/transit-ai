@@ -21,21 +21,20 @@ class city_amenity_grabber:
             except:
                 pass
 
-    def write_amenity_from_coords(self, middle_coordinate):
-        amenity = "restaurant"
+    def write_amenity_from_coords(self, middle_coordinate, amenity):
+        m = 50000 # metres
         city_name = self.grab_city_name_coords(middle_coordinate)
         print(city_name)
         query = f"""
             [out:json];
             area[name="{city_name}"];
-            (node["amenity"="{amenity}"](area)(around:50000, {middle_coordinate[0]}, {middle_coordinate[1]}););
+            (node["amenity"="{amenity}"](area)(around:{m}, {middle_coordinate[0]}, {middle_coordinate[1]}););
             out;
             """
 
         result = api.query(query)
         #result = api.query("node(50.745,7.17,50.75,7.18);out;")
-        lat = []
-        lon = []
+        lat, lon = [], []
         with open("output.txt", "w", encoding='utf-8') as f:
             for x in result.nodes:
                 #print(x.__dict__)
@@ -43,15 +42,18 @@ class city_amenity_grabber:
                     f.write(f"{x.lat},{x.lon} {x.tags['name']}\n")
                     lat.append(x.lat)
                     lon.append(x.lon)
-                    #print(f"{x.lat},{x.lon} {x.tags['name']}")
-        self.return_df(lat,lon)
+        return self.return_df(lat, lon)
 
-    def return_df(self,lat,lon):
+    def return_df(self, lat, lon):
         d = {"lat": lat, "lon": lon}
         df = pd.DataFrame(data=d)
-        print(df)
+        return df
 
 if __name__ == "__main__":
     p = city_amenity_grabber()
     c = [43.360976206013945, -79.78070061430267]
-    p.write_amenity_from_coords(c)
+    df = p.write_amenity_from_coords(c,"restaurant")
+    print(df)
+
+    # LIST OF AMENITIES
+    # https://wiki.openstreetmap.org/wiki/Key:amenity
