@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
-import { Marker, Popup, useMap } from "react-leaflet";
+import { Marker, Polyline, Popup, useMap } from "react-leaflet";
 
 import "../styles/LeafletModule.css";
 
@@ -12,7 +12,7 @@ const ChangeView = ({ center, zoom }) => {
     map.setView(center, zoom);
 };
 
-const LeafletModule = ({ latitude, longitude, zoom, markers }) => {
+const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
     const zoomLevel = zoom ? zoom : DEFAULT_ZOOM;
     console.log(markers);
     return (
@@ -35,6 +35,13 @@ const LeafletModule = ({ latitude, longitude, zoom, markers }) => {
                     <Popup>{marker.text}</Popup>
                 </Marker>
             ))}
+            {lines.map((line) => (
+                <Polyline
+                    positions={line}
+                >
+                </Polyline>
+            ))}
+
         </MapContainer>
     );
 };
