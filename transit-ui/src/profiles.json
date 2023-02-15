@@ -1,0 +1,37 @@
+[
+    {
+        "img": "/profiles/default.png",
+        "name": "George Trieu",
+        "program": "Computer Eng",
+        "organization": "QueensU",
+        "email": "g.trieu@queensu.ca"
+    },
+    {
+        "img": "/profiles/default.png",
+        "name": "Cahal Ng",
+        "program": "Computer Eng",
+        "organization": "QueensU",
+        "email": "xxxx@queensu.ca"
+    },
+    {
+        "img": "/profiles/default.png",
+        "name": "Duncan Cheng",
+        "program": "Computing",
+        "organization": "QueensU",
+        "email": "xxxx@queensu.ca"
+    },
+    {
+        "img": "/profiles/default.png",
+        "name": "Owen Rocchi",
+        "program": "Computing",
+        "organization": "QueensU",
+        "email": "xxxx@queensu.ca"
+    },
+    {
+        "img": "/profiles/default.png",
+        "name": "Pavle Ilic",
+        "program": "Applied Math Eng",
+        "organization": "QueensU",
+        "email": "xxxx@queensu.ca"
+    }
+]
