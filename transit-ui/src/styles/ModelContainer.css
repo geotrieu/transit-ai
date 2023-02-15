@@ -1,0 +1,13 @@
+.model-container {
+    width: 100%;
+}
+
+.model-location-select {
+    display: inline-block;
+    margin: 10px 0px;
+    width: 40%;
+}
+
+.model-location {
+    float: right;
+}
