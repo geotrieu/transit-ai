@@ -66,7 +66,8 @@ def search(lat, lon, search_string, distance, map_client):
 
 
 if __name__ == "__main__":
-    API_KEY = 'AIzaSyDfuS8XpS-iWkalk9VJ4Wa6ExFuAXATKu8'
+    # api key fill in later
+    API_KEY = 'something'
     map_client = googlemaps.Client(API_KEY)
 
     lat, lon, amenity, radius = user_input(map_client)
