@@ -39,7 +39,7 @@ class city_amenity_grabber:
             for x in result.nodes:
                 #print(x.__dict__)
                 if 'name' in x.tags:
-                    f.write(f"{x.lat},{x.lon} {x.tags['name']}\n")
+                    f.write(f"{x.lat},{x.lon},{x.tags['name']}\n")
                     lat.append(x.lat)
                     lon.append(x.lon)
         return self.return_df(lat, lon)
@@ -51,9 +51,11 @@ class city_amenity_grabber:
 
 if __name__ == "__main__":
     p = city_amenity_grabber()
-    c = [43.360976206013945, -79.78070061430267]
-    df = p.write_amenity_from_coords(c,"restaurant")
-    print(df)
+    c = [43.742007579875185, -79.39787586021717]
+    # c is a coordinate in any city. c will return the name of the city, which will then pull all amenities inside of the city, in a dataframe.
+    # this main function is a demonstration of how to import it and implement it
+    df = p.write_amenity_from_coords(c,"food_court")
+    #print(df)
 
     # LIST OF AMENITIES
     # https://wiki.openstreetmap.org/wiki/Key:amenity
