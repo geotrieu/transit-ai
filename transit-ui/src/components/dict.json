@@ -1,0 +1,36 @@
+{
+    "lines": [
+        {
+            "line_name": "line1",
+            "colour": "green",
+            "stations": [
+                {
+                    "lat": 12,
+                    "long": -45,
+                    "station": true
+                },
+                {
+                    "lat": 12,
+                    "long": -46,
+                    "station": false
+                }
+            ]
+        },
+        {
+            "line_name": "line2",
+            "colour": "red",
+            "stations": [
+                {
+                    "lat": 34,
+                    "long": -40,
+                    "station": false
+                },
+                {
+                    "lat": 35,
+                    "long": -46,
+                    "station": false
+                }
+            ]
+        }
+    ]
+}

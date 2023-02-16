@@ -2,7 +2,7 @@ import React from "react";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
 import { Marker, Polyline, Popup, useMap } from "react-leaflet";
-
+import json_data from './dict.json';
 import "../styles/LeafletModule.css";
 
 const DEFAULT_ZOOM = 10;
@@ -11,6 +11,7 @@ const ChangeView = ({ center, zoom }) => {
     const map = useMap();
     map.setView(center, zoom);
 };
+
 
 const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
     const zoomLevel = zoom ? zoom : DEFAULT_ZOOM;
@@ -41,6 +42,9 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
                 >
                 </Polyline>
             ))}
+            {/* {json_data.map((obj) => (
+            ))} */}
+
 
         </MapContainer>
     );
