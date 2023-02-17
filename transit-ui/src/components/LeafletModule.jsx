@@ -12,10 +12,7 @@ const ChangeView = ({ center, zoom }) => {
     map.setView(center, zoom);
 };
 
-const test = json_data.lines.map((lines) => (
-    lines["line_name"]
-));
-console.log(test);
+//console.log(test);
 
 
 const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
@@ -49,6 +46,14 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
                 >
                 </Polyline>
             ))}
+            {json_data.lines.map((lines) => (
+                <Polyline positions={
+                    lines["stations"].map((stations) => (
+                        [stations["lat"], stations["long"]] 
+                    ))
+                }></Polyline>
+                ))
+            }
             
 
 

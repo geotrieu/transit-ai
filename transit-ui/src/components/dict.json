@@ -5,13 +5,13 @@
             "colour": "green",
             "stations": [
                 {
-                    "lat": 12,
-                    "long": -45,
+                    "lat": 43,
+                    "long": -79,
                     "station": true
                 },
                 {
-                    "lat": 12,
-                    "long": -46,
+                    "lat": 42,
+                    "long": -76,
                     "station": false
                 }
             ]
@@ -21,13 +21,13 @@
             "colour": "red",
             "stations": [
                 {
-                    "lat": 34,
-                    "long": -40,
+                    "lat": 47,
+                    "long": -75,
                     "station": false
                 },
                 {
-                    "lat": 35,
-                    "long": -46,
+                    "lat": 47,
+                    "long": -74,
                     "station": false
                 }
             ]
