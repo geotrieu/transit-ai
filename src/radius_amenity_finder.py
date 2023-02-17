@@ -1,5 +1,6 @@
 import overpy
 import pandas as pd
+import csv
 api = overpy.Overpass()
 
 class city_amenity_grabber:
@@ -21,7 +22,7 @@ class city_amenity_grabber:
             except:
                 pass
 
-    def write_amenity_from_coords(self, middle_coordinate, amenity):
+    def write_amenity_from_coords(self, middle_coordinate, amenity, filepath):
         m = 50000 # metres
         city_name = self.grab_city_name_coords(middle_coordinate)
         print(city_name)
@@ -35,11 +36,13 @@ class city_amenity_grabber:
         result = api.query(query)
         #result = api.query("node(50.745,7.17,50.75,7.18);out;")
         lat, lon = [], []
-        with open("output.txt", "w", encoding='utf-8') as f:
+        with open(filepath, "w", newline="", encoding='utf-8') as f:
+            writer = csv.writer(f)
             for x in result.nodes:
                 #print(x.__dict__)
                 if 'name' in x.tags:
-                    f.write(f"{x.lat},{x.lon},{x.tags['name']}\n")
+                    #f.write(f"{x.lat},{x.lon},{x.tags['name']}\n")
+                    writer.writerow([x.lat,x.lon,x.tags['name']])
                     lat.append(x.lat)
                     lon.append(x.lon)
         return self.return_df(lat, lon)
@@ -54,7 +57,7 @@ if __name__ == "__main__":
     c = [43.742007579875185, -79.39787586021717]
     # c is a coordinate in any city. c will return the name of the city, which will then pull all amenities inside of the city, in a dataframe.
     # this main function is a demonstration of how to import it and implement it
-    df = p.write_amenity_from_coords(c,"restaurant")
+    df = p.write_amenity_from_coords(c,"library","library.csv")
     #print(df)
 
     # LIST OF AMENITIES
