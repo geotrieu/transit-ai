@@ -54,7 +54,7 @@ if __name__ == "__main__":
     c = [43.742007579875185, -79.39787586021717]
     # c is a coordinate in any city. c will return the name of the city, which will then pull all amenities inside of the city, in a dataframe.
     # this main function is a demonstration of how to import it and implement it
-    df = p.write_amenity_from_coords(c,"food_court")
+    df = p.write_amenity_from_coords(c,"restaurant")
     #print(df)
 
     # LIST OF AMENITIES

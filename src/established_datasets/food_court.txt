@@ -1,0 +1,36 @@
+43.6646250,-79.3996975,Robarts Library Cafeteria
+43.6621453,-79.3984112,Sid's Southside Cafe
+43.6605623,-79.3930549,Medical Sciences Cafeteria
+43.6591642,-79.3912516,OPG building cafeteria
+43.6705401,-79.3891018,Cumberland Terrace Food Court
+43.6713185,-79.3849664,Hudson's Bay Centre Food Court
+43.7751836,-79.2570828,TASTE MRKT
+43.6546410,-79.4354883,Dufferin Mall Food Court
+43.6698517,-79.3392384,Gerrard Square Food Court
+43.6470924,-79.3826606,Toronto-Dominion Centre Food Hall
+43.7956817,-79.4230184,Centerpoint Mall Food Court
+43.7260576,-79.4518480,dine on 3
+43.7835236,-79.1871157,Market Place
+43.6587271,-79.3810687,Cafeteria
+43.6606590,-79.3924415,Food court seating
+43.8216680,-79.2983097,Silver Star Food Court
+43.6489370,-79.3835210,Food Exchange
+43.6555455,-79.3814185,Urban Eatery
+43.6514240,-79.3827719,Shops at Sheraton Food Court
+43.6461673,-79.3872633,Metro Concourse
+43.6430052,-79.3828818,South Financial Core Food Court
+43.6467068,-79.3800644,The Eatery
+43.6480195,-79.3789811,Commerce Court
+43.7848257,-79.2273636,Cafeteria
+43.5959145,-79.5150518,On the Go Quick Cuisine
+43.6132480,-79.5588062,Gourmet Fare
+43.7199741,-79.6008128,Woodbine Mall Food Court
+43.7416407,-79.5843888,Albion Centre Food Court
+43.7212457,-79.5123025,Sheridan Mall Food Court
+43.7581461,-79.5198951,Yorkgate Food Court
+43.7282024,-79.6080682,Food Emporium
+43.7170965,-79.4474640,Lawrence Square Food Court
+43.7782815,-79.3433576,CF Fairview Mall Food Court
+43.7233837,-79.2990836,Eglinton Square Food Court
+43.8098388,-79.2695253,Woodside Square Food Court
+43.7630004,-79.4103330,Yonge-Sheppard Centre Food Court

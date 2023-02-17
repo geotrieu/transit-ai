@@ -1,0 +1,22 @@
+43.6019990,-79.5003011,Canadian Institude of Floral Design
+43.6423972,-79.3746606,Collège Boréal - Toronto Campus
+43.7733689,-79.3359707,Lambton College - Toronto Campus
+43.7830157,-79.2333048,Canadore College - Stanford Scarborough Campus
+43.8187736,-79.3044394,Alpha International Academy
+43.6619964,-79.3835448,Toronto Film School
+43.6619874,-79.3835280,Yorkville University
+43.7570589,-79.3527135,Brooklyn College
+43.6617142,-79.3790852,Taie International Institute
+43.7692033,-79.2671585,Annamalai University
+43.7722116,-79.2623379,Worksafe Forklift
+43.6622594,-79.3832545,Farm Boy Training Centre
+43.6445065,-79.3686765,George Brown College - School of Design
+43.7650121,-79.4903265,CJ Healthcare College
+43.6698886,-79.3835891,Humber International Graduate School
+43.6308457,-79.5496379,Pharma-Medical Science College of Canada
+43.6415810,-79.5651606,Civic Centre LINC
+43.7536089,-79.4683092,Peak College
+43.7653754,-79.4699700,York Construction Academy
+43.7730705,-79.4685026,Canadian All Care College
+43.7304199,-79.2796064,CDI College
+43.7299098,-79.2803666,Centennial College Performing Arts Centre
