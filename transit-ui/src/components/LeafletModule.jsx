@@ -12,8 +12,15 @@ const ChangeView = ({ center, zoom }) => {
     map.setView(center, zoom);
 };
 
+const test = json_data.lines.map((lines) => (
+    lines["line_name"]
+));
+console.log(test);
+
 
 const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
+    
+
     const zoomLevel = zoom ? zoom : DEFAULT_ZOOM;
     console.log(markers);
     return (
@@ -42,8 +49,7 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
                 >
                 </Polyline>
             ))}
-            {/* {json_data.map((obj) => (
-            ))} */}
+            
 
 
         </MapContainer>
