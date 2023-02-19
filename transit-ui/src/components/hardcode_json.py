@@ -34,6 +34,27 @@ d["lines"].append({
         }
     ]
 })
+d["lines"].append({
+    "line_name": "Bloor Line",
+    "colour": "green",
+    "stations": [
+        {
+            "lat": 43.66232131647472,
+            "long": -79.42576367913883,
+            "station": True
+        },
+        {
+            "lat": 43.678162843940655,
+            "long": -79.34930882676771,
+            "station": False
+        },
+        {
+            "lat": 43.69138551428441,
+            "long": -79.28731323953545,
+            "station": True
+        }
+    ]
+})
 print(d)
 
 with open("dict.json", "w") as f:
