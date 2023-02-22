@@ -1,0 +1,5 @@
+,amenity,name,latitude,longitude,id,addr:city,addr:country,addr:housenumber,addr:postcode,addr:province,addr:street,addr:unit,description,email,mapillary,phone,website
+0,college,CJ Healthcare College,43.7650121,-79.4903265,8828490091,,,,,,,,,,,,
+1,college,Peak College,43.7536089,-79.4683092,9543551939,,,,,,,,,,,,
+2,college,York Construction Academy,43.7653754,-79.4699700,9550175417,North York,CA,155,M3J 2C6,Ontario,Champagne Drive,8A,York Construction Academy (YCA) is a Private Career College founded in 2001 and registered under the Private Career Colleges Act of 2005. YCA provides a hands-on learning experience for individuals pursuing a career in the construction and home renovation,yorkacademy@yahoo.com,642396717042265,+1 416-630-5559,www.yorkacademy.ca
+3,college,Canadian All Care College,43.7730705,-79.4685026,9740184036,,,,,,,,,,,,
