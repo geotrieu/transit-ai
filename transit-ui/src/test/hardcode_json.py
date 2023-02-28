@@ -57,5 +57,5 @@ d["lines"].append({
 })
 print(d)
 
-with open("dict.json", "w") as f:
+with open("../components/data/dict.json", "w") as f:
     json.dump(d, f, indent=4)

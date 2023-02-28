@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../styles/ModelContainer.css";
 import SelectMenu from "./common/SelectMenu";
 import LeafletModule from "./LeafletModule";
+import lines from './dict.json';
 
 const cityDetails = {
     YYZ: {
@@ -42,8 +43,6 @@ const markers = [
         text: "Kingston YGK Marker",
     },
 ];
-
-import lines from './dict.json';
 
 const ModelContainer = () => {
     const cityOptions = Object.entries(cityDetails).map(([key, value]) => ({
