@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../styles/ModelContainer.css";
 import SelectMenu from "./common/SelectMenu";
 import LeafletModule from "./LeafletModule";
-import lines from './dict.json';
+import lines from './data/dict.json';
 
 const cityDetails = {
     YYZ: {
