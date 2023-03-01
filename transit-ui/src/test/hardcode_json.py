@@ -4,7 +4,7 @@ d = {}
 d["lines"] = []
 d["lines"].append({
     "line_name": "line1",
-    "colour": "green",
+    "colour": [100,100,100],
     "stations": [
         {
             "lat": 12,
@@ -20,7 +20,7 @@ d["lines"].append({
 })
 d["lines"].append({
     "line_name": "line2",
-    "colour": "red",
+    "colour": [100,100,100],
     "stations": [
         {
             "lat": 34,
@@ -36,7 +36,7 @@ d["lines"].append({
 })
 d["lines"].append({
     "line_name": "Bloor Line",
-    "colour": "green",
+    "colour": [0,146,63],
     "stations": [
         {
             "lat": 43.66232131647472,

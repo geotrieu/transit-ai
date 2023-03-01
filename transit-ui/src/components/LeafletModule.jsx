@@ -9,8 +9,7 @@ const DEFAULT_ZOOM = 10;
 const ChangeView = ({ center, zoom }) => {
     const map = useMap();
     map.setView(center, zoom);
-};
-
+}
 //console.log(test);
 
 
@@ -41,12 +40,15 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
             ))}
             {lines.lines.map((line) => (
                 
-                <Polyline positions={
-                    line["stations"].map((station) => (
-                        [station["lat"], station["long"]]
-
-                    ))
-                }></Polyline>
+                
+                <Polyline
+                    pathOptions={{color: `rgb(${line["colour"][0]},${line["colour"][1]},${line["colour"][2]})`}}
+                    positions={
+                        line["stations"].map((station) => (
+                            [station["lat"], station["long"]]
+                        ))}
+                          
+                ></Polyline>
                 ))
             }
             {lines.lines.map((line) => (
