@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
-import { CircleMarker, Polyline, Popup, useMap } from "react-leaflet";
+import { Marker, Popup, useMap } from "react-leaflet";
 
 import "../styles/LeafletModule.css";
 
@@ -12,8 +12,9 @@ const ChangeView = ({ center, zoom }) => {
     map.setView(center, zoom);
 };
 
-const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
+const LeafletModule = ({ latitude, longitude, zoom, markers }) => {
     const zoomLevel = zoom ? zoom : DEFAULT_ZOOM;
+    console.log(markers);
     return (
         <MapContainer
             className="leaflet-map"
@@ -26,31 +27,13 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines }) => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {lines.map((line) => (
-                <Polyline
-                    key={line.key}
-                    positions={line.positions}
-                    pathOptions={{
-                        weight: 5,
-                        color: line.color,
-                        smoothFactor: 5,
-                    }}
-                />
-            ))}
             {markers.map((marker) => (
-                <CircleMarker
+                <Marker
                     key={marker.key}
-                    center={[marker.latitude, marker.longitude]}
-                    radius={5}
-                    pathOptions={{
-                        weight: 2,
-                        color: "black",
-                        fillOpacity: 0.8,
-                        fillColor: "white",
-                    }}
+                    position={[marker.latitude, marker.longitude]}
                 >
-                    {marker.text ? <Popup>{marker.text}</Popup> : <></>}
-                </CircleMarker>
+                    <Popup>{marker.text}</Popup>
+                </Marker>
             ))}
         </MapContainer>
     );
