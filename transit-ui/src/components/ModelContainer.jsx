@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../styles/ModelContainer.css";
 import SelectMenu from "./common/SelectMenu";
 import LeafletModule from "./LeafletModule";
+import lines from './data/dict.json';
 
 const cityDetails = {
     YYZ: {
@@ -55,13 +56,7 @@ const ModelContainer = () => {
         <div className="model-container content">
             <h3>Transit AI Predictor</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                There are pins for Toronto, Vancouver, and Kingston.
             </p>
             <span>
                 <SelectMenu
@@ -76,6 +71,7 @@ const ModelContainer = () => {
                 longitude={cityDetails[city].longitude}
                 zoom={14}
                 markers={markers}
+                lines={lines}
             />
         </div>
     );
