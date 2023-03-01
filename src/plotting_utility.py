@@ -39,12 +39,12 @@ def plotHeatmap(gridPoints, line, density):
     ax.plot([0, density], [y_begin_hm, y_end_hm], linewidth=3, color='r')
     return ax
 
-def plotHeatmapPolynomial(gridPoints, curves, density):
+def plotHeatmapPoints(gridPoints, points, density):
     fig = plt.figure()
     ax = sns.heatmap(gridPoints.pivot("long", "lat", "score"))
-    for curve in curves:
-        x = curve[0]
-        y = curve[1]
+    for p in points:
+        x = p[0]
+        y = p[1]
         x_hm = [int(a) for a in ((x - gridPoints["lat"].iloc[0]) / (gridPoints["lat"].iloc[-1] - gridPoints["lat"].iloc[0]) * density)]
         y_hm = [int(a) for a in ((y - gridPoints["long"].iloc[0]) / (gridPoints["long"].iloc[-1] - gridPoints["long"].iloc[0]) * density)]
         ax.scatter(x_hm, y_hm, linewidth=1)
