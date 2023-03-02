@@ -3,8 +3,7 @@ import json
 d = {}
 d["lines"] = []
 d["lines"].append({
-    "line_name": "line1",
-    "colour": "green",
+    "colour": "#34dd3d",
     "stations": [
         {
             "lat": 12,
@@ -19,8 +18,7 @@ d["lines"].append({
     ]
 })
 d["lines"].append({
-    "line_name": "line2",
-    "colour": "red",
+    "colour": "#80923f",
     "stations": [
         {
             "lat": 34,
@@ -35,8 +33,7 @@ d["lines"].append({
     ]
 })
 d["lines"].append({
-    "line_name": "Bloor Line",
-    "colour": "green",
+    "colour": "#00923f",
     "stations": [
         {
             "lat": 43.66232131647472,
