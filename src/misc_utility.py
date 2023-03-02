@@ -1,4 +1,5 @@
 from geopy.distance import geodesic
+import pandas as pd
 
 def getDistance(origin, stationCor):
     return abs(geodesic(origin, stationCor).meters/1000)
