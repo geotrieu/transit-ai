@@ -1,8 +1,7 @@
 {
     "lines": [
         {
-            "line_name": "line1",
-            "colour": "green",
+            "colour": "#34dd3d",
             "stations": [
                 {
                     "lat": 12,
@@ -17,8 +16,7 @@
             ]
         },
         {
-            "line_name": "line2",
-            "colour": "red",
+            "colour": "#80923f",
             "stations": [
                 {
                     "lat": 34,
@@ -33,8 +31,7 @@
             ]
         },
         {
-            "line_name": "Bloor Line",
-            "colour": "green",
+            "colour": "#00923f",
             "stations": [
                 {
                     "lat": 43.66232131647472,

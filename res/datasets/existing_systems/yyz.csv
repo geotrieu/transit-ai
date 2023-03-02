@@ -1,0 +1,66 @@
+X,Y,STATION,LINE,PLATFORM_L,AVG_PASSEN,LINE2,PLATFORM_1,SUBWAY_TRA,ADDRESS,Opened
+-79.53583253,43.63734493,Kipling,Bloor-Danforth,1,53640,,,FALSE,5247 Dundas St. West,1980
+-79.52461473,43.64537456,Islington,Bloor-Danforth,1,43090,,,FALSE,3286 Bloor St. West,1968
+-79.51132775,43.64825145,Royal York,Bloor-Danforth,2,19440,,,FALSE,3012 Bloor St. West,1968
+-79.49509777,43.65010203,Old Mill,Bloor-Danforth,2,5780,,,FALSE,2672 Bloor St. West,1968
+-79.48445451,43.64977663,Jane,Bloor-Danforth,2,16730,,,FALSE,2440 Bloor St. West,1968
+-79.47630091,43.65159511,Runnymede,Bloor-Danforth,2,15900,,,FALSE,2218 Bloor St. West,1968
+-79.46619141,43.65397668,High Park,Bloor-Danforth,2,10880,,,FALSE,,1968
+-79.45986837,43.65550711,Keele,Bloor-Danforth,2,14800,,,FALSE,,1966
+-79.45236742,43.65708609,Dundas West,Bloor-Danforth,2,26500,,,FALSE,,1966
+-79.44257988,43.65900104,Lansdowne,Bloor-Danforth,2,16490,,,FALSE,,1966
+-79.43546852,43.66024664,Dufferin,Bloor-Danforth,2,27600,,,FALSE,,1966
+-79.42593507,43.6624166,Ossington,Bloor-Danforth,2,25990,,,FALSE,,1966
+-79.41843718,43.66410656,Christie,Bloor-Danforth,2,12060,,,FALSE,,1966
+-79.41130201,43.6656673,Bathurst,Bloor-Danforth,2,28310,,,FALSE,,1966
+-79.40397531,43.66729487,Spadina,Bloor-Danforth,2,35310,,,FALSE,,1966
+-79.39951904,43.66828354,St. George,Bloor-Danforth,1,119840,Yonge-University-Spadina,1,TRUE,,1963
+-79.3898953,43.67025512,Bay,Bloor-Danforth,1,28730,,,FALSE,,1966
+-79.38572988,43.67079308,Bloor-Yonge,Bloor-Danforth,2,403530,Yonge-University-Spadina,1,TRUE,,1954
+-79.37654762,43.67230371,Sherbourne,Bloor-Danforth,2,25000,,,FALSE,,1966
+-79.36847375,43.67392221,Castle Frank,Bloor-Danforth,2,8650,,,FALSE,,1966
+-79.35865873,43.67671775,Broadview,Bloor-Danforth,2,30390,,,FALSE,,1966
+-79.35224262,43.67830949,Chester,Bloor-Danforth,2,6980,,,FALSE,,1966
+-79.34506077,43.67976649,Pape,Bloor-Danforth,2,27080,,,FALSE,,1966
+-79.3377958,43.68121561,Donlands,Bloor-Danforth,2,9770,,,FALSE,,1966
+-79.33027449,43.68278377,Greenwood,Bloor-Danforth,2,9910,,,FALSE,,1966
+-79.32308043,43.68428171,Coxwell,Bloor-Danforth,2,16700,,,FALSE,,1966
+-79.31297114,43.68650521,Woodbine,Bloor-Danforth,2,13810,,,FALSE,,1966
+-79.30201257,43.68897417,Main Street,Bloor-Danforth,2,22670,,,FALSE,,1968
+-79.28945982,43.69463146,Victoria Park,Bloor-Danforth,2,25520,,,FALSE,,1968
+-79.27906713,43.71116544,Warden,Bloor-Danforth,1,26830,,,FALSE,,1968
+-79.26366505,43.73245326,Kennedy,Bloor-Danforth,1,68160,,,FALSE,,1980
+-79.37990437,43.64575948,Union,Yonge-University-Spadina,1,102160,,,FALSE,,1954
+-79.38481401,43.64765145,St. Andrew,Yonge-University-Spadina,1,41020,,,FALSE,,1963
+-79.37786083,43.64913596,King,Yonge-University-Spadina,2,60270,,,FALSE,,1954
+-79.38662461,43.65083985,Osgoode,Yonge-University-Spadina,1,23250,,,FALSE,,1963
+-79.37926589,43.652381,Queen,Yonge-University-Spadina,2,58710,,,FALSE,,1954
+-79.38830045,43.65483294,St. Patrick,Yonge-University-Spadina,1,119820,,,FALSE,,1963
+-79.38093007,43.65634341,Dundas,Yonge-University-Spadina,2,69150,,,FALSE,,1954
+-79.39045698,43.65985727,Queen's Park,Yonge-University-Spadina,1,47390,,,FALSE,,1963
+-79.38308061,43.66138181,College,Yonge-University-Spadina,2,49340,,,FALSE,,1954
+-79.38376218,43.66524233,Wellesley,Yonge-University-Spadina,2,23120,,,FALSE,,1954
+-79.39354413,43.66734632,Museum,Yonge-University-Spadina,1,8220,,,FALSE,,1963
+-79.38867678,43.67704462,Rosedale,Yonge-University-Spadina,2,7520,,,FALSE,,1954
+-79.39116903,43.68333168,Summerhill,Yonge-University-Spadina,2,5920,,,FALSE,,1954
+-79.39396753,43.68827434,St. Clair,Yonge-University-Spadina,2,28680,,,FALSE,,1954
+-79.39735979,43.69804063,Davisville,Yonge-University-Spadina,2,22970,,,FALSE,,1954
+-79.39860763,43.70660856,Eglinton,Yonge-University-Spadina,1,70720,,,FALSE,,1954
+-79.40217054,43.72496167,Lawrence,Yonge-University-Spadina,1,22230,,,FALSE,,1973
+-79.40652569,43.7441737,York Mills,Yonge-University-Spadina,1,27260,,,FALSE,,1973
+-79.41093974,43.76151134,Sheppard-Yonge,Yonge-University-Spadina,1,123480,Sheppard,1,TRUE,,1974
+-79.41268826,43.7687938,North York Centre,Yonge-University-Spadina,2,25480,,,FALSE,,1987
+-79.41550023,43.77983235,Finch,Yonge-University-Spadina,1,97400,,,FALSE,,1974
+-79.40526716,43.67032045,Spadina,Yonge-University-Spadina,2,13040,,,FALSE,,1978
+-79.40708109,43.67497147,Dupont,Yonge-University-Spadina,2,16870,,,FALSE,,1978
+-79.41540849,43.68412321,St Clair West,Yonge-University-Spadina,2,53770,,,FALSE,,1978
+-79.43618133,43.69942965,Eglinton West,Yonge-University-Spadina,2,19850,,,FALSE,,1978
+-79.44125649,43.70954705,Glencairn,Yonge-University-Spadina,1,5560,,,FALSE,,1978
+-79.44416696,43.71592277,Lawrence West,Yonge-University-Spadina,1,20560,,,FALSE,,1978
+-79.44785511,43.72555601,Yorkdale,Yonge-University-Spadina,1,24930,,,FALSE,,1978
+-79.44998668,43.73421423,Wilson,Yonge-University-Spadina,1,21680,,,FALSE,,1978
+-79.46244753,43.74979849,Downsview,Yonge-University-Spadina,1,31600,,,FALSE,,1966
+-79.38780292,43.76676396,Bayview,Sheppard,1,8200,,,FALSE,,2002
+-79.37664805,43.76918324,Bessarion,Sheppard,1,2590,,,FALSE,,2002
+-79.36682635,43.77093105,Leslie,Sheppard,1,5610,,,FALSE,,2002
+-79.34626172,43.7753182,Don Mills,Sheppard,1,31500,,,FALSE,,2002

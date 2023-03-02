@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
-import { Marker, Polyline, Popup, useMap } from "react-leaflet";
+import { Marker, Polyline, Popup, useMap, CircleMarker } from "react-leaflet";
 import "../styles/LeafletModule.css";
 
 const DEFAULT_ZOOM = 10;
@@ -9,8 +9,7 @@ const DEFAULT_ZOOM = 10;
 const ChangeView = ({ center, zoom }) => {
     const map = useMap();
     map.setView(center, zoom);
-};
-
+}
 //console.log(test);
 
 
@@ -41,18 +40,33 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
             ))}
             {lines.lines.map((line) => (
                 
-                <Polyline positions={
-                    line["stations"].map((station) => (
-                        [station["lat"], station["long"]]
-
-                    ))
-                }></Polyline>
+                
+                <Polyline
+                    pathOptions={{color: `${line["colour"]}`}}
+                    positions={
+                        line["stations"].map((station) => (
+                            [station["lat"], station["long"]]
+                        ))}
+                          
+                ></Polyline>
                 ))
             }
             {lines.lines.map((line) => (
                 line["stations"].map((station) => {
                     if (station["station"]) {
-                        return <Marker position={[station["lat"],station["long"]]}></Marker>
+                        //return <Marker position={[station["lat"],station["long"]]}></Marker>
+                        return <CircleMarker
+                            key={[station["lat"],station["long"]]}
+                            center={[station["lat"],station["long"]]}
+                            radius={5}
+                            pathOptions={{
+                                weight: 2,
+                                color: "black",
+                                fillOpacity: 0.8,
+                                fillColor: "white",
+                            }}
+                        >
+                        </CircleMarker>
                     }
 
                 })
