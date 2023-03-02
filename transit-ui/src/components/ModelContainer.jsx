@@ -3,10 +3,13 @@ import React, { useState } from "react";
 import "../styles/ModelContainer.css";
 import SelectMenu from "./common/SelectMenu";
 import LeafletModule from "./LeafletModule";
-import lines from './data/dict.json';
+import toronto_lines from './data/toronto.json';
+import kingston_lines from './data/kingston.json';
+//import lines2 from './data/dict2.json';
 import { LatLngBounds } from 'leaflet';
 import { MapContainer, TileLayer, useMap , Popup } from 'react-leaflet';
 import Select from 'react-select';
+let lines = toronto_lines 
 
 const cityDetails = {
     YYZ: {
@@ -54,15 +57,21 @@ const ModelContainer = () => {
     }));
 
     const [city, setCity] = useState(cityOptions.at(0).value);
+    console.log(city)
     
-    const options = [
-        { value: 'option1', label: 'Number of Lines: 6' },
-        { value: 'option2', label: 'Number of Lines: 5' },
-        { value: 'option3', label: 'Number of Lines: 4' },
-        { value: 'option4', label: 'Number of Lines: 3' },
-        { value: 'option5', label: 'Number of Lines: 2' },
-        { value: 'option6', label: 'Number of Lines: 1' },
-    ];
+    if (city === "YYZ") {
+        lines = toronto_lines
+    } else if (city == "YGK") {
+        lines = kingston_lines
+    }
+
+    //console.log(lines.lines.length)
+
+    let options = []
+    for (let i = lines.lines.length; i > 0; i--) {
+        options.push({value: `option${i}`, label: `Number of Lines: ${i}`, key: i})
+    }
+    console.log(options)
 
     const customStyles = {
         option: (provided, state) => ({
@@ -83,7 +92,7 @@ const ModelContainer = () => {
     };
     
     const [selectedValue, setSelectedValue] = useState(null);
-
+    
     return (
         <div className="model-container content">
             <div>
@@ -114,8 +123,9 @@ const ModelContainer = () => {
                     longitude={cityDetails[city].longitude}
                     zoom={14}
                     markers={markers}
-                    lines={lines}
+                    lines={lines.lines}
                 />
+                
             </div>
         </div>
     );
