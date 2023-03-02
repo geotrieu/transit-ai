@@ -4,9 +4,8 @@ import "../styles/ModelContainer.css";
 import SelectMenu from "./common/SelectMenu";
 import LeafletModule from "./LeafletModule";
 import lines from './data/dict.json';
-import json_data from './dict.json';
 import { LatLngBounds } from 'leaflet';
-import { MapContainer, TileLayer, useMap , Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, useMap , Popup } from 'react-leaflet';
 import Select from 'react-select';
 
 const cityDetails = {
