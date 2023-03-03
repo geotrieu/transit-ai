@@ -3,13 +3,23 @@ import React, { useState } from "react";
 import "../styles/ModelContainer.css";
 import SelectMenu from "./common/SelectMenu";
 import LeafletModule from "./LeafletModule";
-import toronto_lines from './data/toronto.json';
-import kingston_lines from './data/kingston.json';
 //import lines2 from './data/dict2.json';
 import { LatLngBounds } from 'leaflet';
 import { MapContainer, TileLayer, useMap , Popup } from 'react-leaflet';
 import Select from 'react-select';
-let lines = toronto_lines 
+
+let batch_lines;
+let yyz_lines = []
+let ygk_lines = []
+//const fs = require('fs');
+
+for (let i = 1; i < 4; i++) {
+    yyz_lines.push(require(`./data/yyz_${i}.json`))
+    ygk_lines.push(require(`./data/ygk_${i}.json`))
+}
+let current_city_lines = yyz_lines
+
+let lines = yyz_lines[yyz_lines.length-1]
 
 const cityDetails = {
     YYZ: {
@@ -56,22 +66,35 @@ const ModelContainer = () => {
         value: key,
     }));
 
-    const [city, setCity] = useState(cityOptions.at(0).value);
-    console.log(city)
     
-    if (city === "YYZ") {
-        lines = toronto_lines
-    } else if (city == "YGK") {
-        lines = kingston_lines
+
+    const [city, setCity] = useState(cityOptions.at(0).value);
+
+    let options = []
+    for (let i = current_city_lines.length; i > 0; i--) {
+        options.push({value: i, label: `Number of Lines: ${i}`})
     }
+
+    let [selectedValue, setSelectedValue] = useState(null);
+    if (selectedValue === null) {
+        selectedValue = options[options.length-1]
+    }
+    console.log(selectedValue)
+        
+    if (city === "YYZ") {
+        current_city_lines = yyz_lines
+        lines = yyz_lines[selectedValue.value-1]
+        
+    } else if (city == "YGK") {
+        current_city_lines = ygk_lines
+        lines = ygk_lines[selectedValue.value-1]
+    }
+
+    
 
     //console.log(lines.lines.length)
 
-    let options = []
-    for (let i = lines.lines.length; i > 0; i--) {
-        options.push({value: `option${i}`, label: `Number of Lines: ${i}`, key: i})
-    }
-    console.log(options)
+    
 
     const customStyles = {
         option: (provided, state) => ({
@@ -91,7 +114,9 @@ const ModelContainer = () => {
     }),
     };
     
-    const [selectedValue, setSelectedValue] = useState(null);
+    
+    
+    
     
     return (
         <div className="model-container content">
