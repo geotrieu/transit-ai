@@ -3,52 +3,56 @@ import json
 d = {}
 d["lines"] = []
 d["lines"].append({
-    "colour": "#00923f",
+    "colour": "#34dd3d",
     "stations": [
         {
-            "lat": 44.230149950539236,
-            "long":  -76.48536201001498,
+            "lat": 12,
+            "long": -45,
             "station": True
         },
         {
-            "lat": 44.231780707158485,
-            "long": -76.49566234477982,
+            "lat": 12,
+            "long": -46,
             "station": False
-        },
-        {
-            "lat": 44.23088813847274,
-            "long":  -76.51450381468338,
-            "station": True
-        },
-        {
-            "lat": 44.23015275968255,
-            "long": -76.52620966619993,
-            "station": True
         }
     ]
 })
 d["lines"].append({
-    "colour": "#ffff00",
+    "colour": "#80923f",
     "stations": [
         {
-            "lat": 44.231148408530046,
-            "long":  -76.47955611478864,
+            "lat": 34,
+            "long": -40,
+            "station": False
+        },
+        {
+            "lat": 35,
+            "long": -46,
+            "station": False
+        }
+    ]
+})
+d["lines"].append({
+    "colour": "#00923f",
+    "stations": [
+        {
+            "lat": 43.66232131647472,
+            "long": -79.42576367913883,
             "station": True
         },
         {
-            "lat": 44.23299222536197,
-            "long": -76.49166663286621,
-            "station": True
+            "lat": 43.678162843940655,
+            "long": -79.34930882676771,
+            "station": False
         },
         {
-            "lat": 44.241089730861376,
-            "long": -76.51159560725303,
+            "lat": 43.69138551428441,
+            "long": -79.28731323953545,
             "station": True
         }
-
     ]
 })
 print(d)
 
-with open("../components/data/kingston.json", "w") as f:
+with open("../components/data/dict.json", "w") as f:
     json.dump(d, f, indent=4)

@@ -10,12 +10,14 @@ const ChangeView = ({ center, zoom }) => {
     const map = useMap();
     map.setView(center, zoom);
 }
+//console.log(test);
 
 
 const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
     
-    const zoomLevel = zoom ? zoom : DEFAULT_ZOOM;
 
+    const zoomLevel = zoom ? zoom : DEFAULT_ZOOM;
+    console.log(markers);
     return (
         <MapContainer
             className="leaflet-map"
@@ -37,6 +39,8 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
                 </Marker>
             ))}
             {lines.map((line) => (
+                
+                
                 <Polyline
                     pathOptions={{color: `${line["colour"]}`}}
                     positions={
