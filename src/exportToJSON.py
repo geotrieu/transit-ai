@@ -8,7 +8,7 @@ def getDarkColour():
     hex_code = "#{:02x}{:02x}{:02x}".format(r, g, b)
     return hex_code
 
-def exportToJSON(lines, stations, filename):
+def exportToJSON(lines, stations, filename, customColors = []):
     obj = {
         "lines": []
     }
@@ -35,7 +35,7 @@ def exportToJSON(lines, stations, filename):
             })
         lineObj = {
             "line_name": idx,
-            "colour": getDarkColour(),
+            "colour": customColors[idx] if len(customColors) > idx else getDarkColour(),
             "stations": stationsArr
         }
         obj["lines"].append(lineObj)

@@ -5,7 +5,13 @@
 .model-location-select {
     display: inline-block;
     margin: 10px 0px;
-    width: 40%;
+    width: 20%;
+}
+
+.model-lines-select {
+    display: inline-block;
+    margin: 10px 10px 0px 10px;
+    width: 30%;
 }
 
 .model-location {

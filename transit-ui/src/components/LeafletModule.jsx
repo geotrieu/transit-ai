@@ -9,15 +9,17 @@ const DEFAULT_ZOOM = 10;
 const ChangeView = ({ center, zoom }) => {
     const map = useMap();
     map.setView(center, zoom);
-}
-//console.log(test);
+};
 
-
-const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
-    
-
+const LeafletModule = ({
+    latitude,
+    longitude,
+    zoom,
+    markers = [],
+    lines = [],
+}) => {
     const zoomLevel = zoom ? zoom : DEFAULT_ZOOM;
-    console.log(markers);
+
     return (
         <MapContainer
             className="leaflet-map"
@@ -34,48 +36,37 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
                 <Marker
                     key={marker.key}
                     position={[marker.latitude, marker.longitude]}
-                >
-                    
-                </Marker>
+                ></Marker>
             ))}
-            {lines.lines.map((line) => (
-                
-                
+            {lines.map((line) => (
                 <Polyline
-                    pathOptions={{color: `${line["colour"]}`}}
-                    positions={
-                        line["stations"].map((station) => (
-                            [station["lat"], station["long"]]
-                        ))}
-                          
+                    pathOptions={{ color: `${line["colour"]}` }}
+                    positions={line["stations"].map((station) => [
+                        station["lat"],
+                        station["long"],
+                    ])}
                 ></Polyline>
-                ))
-            }
-            {lines.lines.map((line) => (
+            ))}
+            {lines.map((line) =>
                 line["stations"].map((station) => {
                     if (station["station"]) {
                         //return <Marker position={[station["lat"],station["long"]]}></Marker>
-                        return <CircleMarker
-                            key={[station["lat"],station["long"]]}
-                            center={[station["lat"],station["long"]]}
-                            radius={5}
-                            pathOptions={{
-                                weight: 2,
-                                color: "black",
-                                fillOpacity: 0.8,
-                                fillColor: "white",
-                            }}
-                        >
-                        </CircleMarker>
+                        return (
+                            <CircleMarker
+                                key={[station["lat"], station["long"]]}
+                                center={[station["lat"], station["long"]]}
+                                radius={4}
+                                pathOptions={{
+                                    weight: 2,
+                                    color: "black",
+                                    fillOpacity: 1,
+                                    fillColor: "white",
+                                }}
+                            ></CircleMarker>
+                        );
                     }
-
                 })
-            ))
-            }
-            
-            
-
-
+            )}
         </MapContainer>
     );
 };
