@@ -95,29 +95,6 @@ const ModelContainer = () => {
     //console.log(lines.lines.length)
 
     
-
-    const customStyles = {
-        option: (provided, state) => ({
-        ...provided,
-        zIndex: 9999,
-    }),
-        menu: (provided, state) => ({
-        ...provided,
-        zIndex: 9999,
-        width: '375px',
-        minHeight: '30px',
-    }),
-        control: (provided, state) => ({
-        ...provided,
-        width: '375px',
-        minHeight: '30px',
-    }),
-    };
-    
-    
-    
-    
-    
     return (
         <div className="model-container content">
             <div>
@@ -134,23 +111,21 @@ const ModelContainer = () => {
                         options={cityOptions}
                     />
                     <h6 className="model-location">Now Showing: {city}</h6>
+                     <SelectMenu
+                        className="model-number-of-lines-select"
+                        options={options}
+                        onSelect={setNumberOfLines}
+                     />
                 </span>
                 <span>
-                    <Select
-                         options={options}
-                         value={selectedValue}
-                         onChange={setSelectedValue}
-                         styles={customStyles}
-                    />
+                     <LeafletModule
+                         latitude={cityDetails[city].latitude}
+                         longitude={cityDetails[city].longitude}
+                         zoom={14}
+                         markers={markers}
+                         lines={lines.lines.slice(0, numberOfLines)}
+                     />
                 </span>
-                <LeafletModule
-                    latitude={cityDetails[city].latitude}
-                    longitude={cityDetails[city].longitude}
-                    zoom={14}
-                    markers={markers}
-                    lines={lines.lines}
-                />
-                
             </div>
         </div>
     );
