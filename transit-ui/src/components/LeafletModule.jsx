@@ -38,7 +38,7 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
                     
                 </Marker>
             ))}
-            {lines.lines.map((line) => (
+            {lines.map((line) => (
                 
                 
                 <Polyline
@@ -51,7 +51,7 @@ const LeafletModule = ({ latitude, longitude, zoom, markers, lines}) => {
                 ></Polyline>
                 ))
             }
-            {lines.lines.map((line) => (
+            {lines.map((line) => (
                 line["stations"].map((station) => {
                     if (station["station"]) {
                         //return <Marker position={[station["lat"],station["long"]]}></Marker>
