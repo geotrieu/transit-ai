@@ -1,20 +1,15 @@
-import React from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-  } from "react-router-dom";
+import React from "react";
+import { Container, Col, Row } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "../styles/MainContainer.css";
-import ModelContainer from './ModelContainer';
-import NavigationContainer from './NavigationContainer';
-import TeamContainer from './TeamContainer';
+import ModelContainer from "./ModelContainer";
+import NavigationContainer from "./NavigationContainer";
+import TeamContainer from "./TeamContainer";
 
-const footer = "© 2023 QMIND Transit AI"
+const footer = "© 2023 QMIND Transit AI";
 
 const MainContainer = () => {
-
     return (
         <div className="page">
             <Router>
@@ -36,11 +31,9 @@ const MainContainer = () => {
                     </Row>
                 </Container>
             </Router>
-            <footer className="footer">
-                {footer}
-            </footer>
-        </div> 
+            <footer className="footer">{footer}</footer>
+        </div>
     );
-}
- 
+};
+
 export default MainContainer;

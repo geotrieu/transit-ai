@@ -76,11 +76,12 @@ class city_amenity_grabber:
 
 if __name__ == "__main__":
     p = city_amenity_grabber()
-    c = [43.742007579875185, -79.39787586021717]
+    c = [46.27736, -123.12833]
     # c is a coordinate in any city. c will return the name of the city, which will then pull all amenities inside of the city, in a dataframe.
     # this main function is a demonstration of how to import it and implement it
-    df = p.write_amenity_from_coords(c,"library","library.csv")
+    df = p.write_amenity_from_coords(c,"community_centre","community_centre.csv")
     #print(df)
 
     # LIST OF AMENITIES
     # https://wiki.openstreetmap.org/wiki/Key:amenity
+#%%
