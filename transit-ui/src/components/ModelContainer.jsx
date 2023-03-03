@@ -56,12 +56,33 @@ const ModelContainer = () => {
     const [city, setCity] = useState(cityOptions.at(0).value);
     
     const options = [
-        { value: '1', option: '1' },
-        { value: '2', option: '2' },
-        { value: '3', option: '3' },
+        { value: 'option1', label: 'Number of Lines: 6' },
+        { value: 'option2', label: 'Number of Lines: 5' },
+        { value: 'option3', label: 'Number of Lines: 4' },
+        { value: 'option4', label: 'Number of Lines: 3' },
+        { value: 'option5', label: 'Number of Lines: 2' },
+        { value: 'option6', label: 'Number of Lines: 1' },
     ];
+
+    const customStyles = {
+        option: (provided, state) => ({
+        ...provided,
+        zIndex: 9999,
+    }),
+        menu: (provided, state) => ({
+        ...provided,
+        zIndex: 9999,
+        width: '375px',
+        minHeight: '30px',
+    }),
+        control: (provided, state) => ({
+        ...provided,
+        width: '375px',
+        minHeight: '30px',
+    }),
+    };
     
-    const [numberOfLines, setNumberOfLines] = useState(options.at(1).value);
+    const [selectedValue, setSelectedValue] = useState(null);
 
     return (
         <div className="model-container content">
@@ -79,21 +100,22 @@ const ModelContainer = () => {
                         options={cityOptions}
                     />
                     <h6 className="model-location">Now Showing: {city}</h6>
-                     <SelectMenu
-                        className="model-number-of-lines-select"
-                        options={options}
-                        onSelect={setNumberOfLines}
-                     />
                 </span>
                 <span>
-                     <LeafletModule
-                         latitude={cityDetails[city].latitude}
-                         longitude={cityDetails[city].longitude}
-                         zoom={14}
-                         markers={markers}
-                         lines={lines.lines.slice(0, numberOfLines)}
-                     />
+                    <Select
+                         options={options}
+                         value={selectedValue}
+                         onChange={setSelectedValue}
+                         styles={customStyles}
+                    />
                 </span>
+                <LeafletModule
+                    latitude={cityDetails[city].latitude}
+                    longitude={cityDetails[city].longitude}
+                    zoom={14}
+                    markers={markers}
+                    lines={lines}
+                />
             </div>
         </div>
     );
