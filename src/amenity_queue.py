@@ -3,7 +3,7 @@ import os
 from os.path import dirname as up
 
 p = city_amenity_grabber()
-c = [44.24219613427535, -76.50074802100364]
+c = [44.239336159212336, -76.50802137440346]
 # c is a coordinate in any city. c will return the name of the city, which will then pull all amenities inside of the city, in a dataframe.
 # this main function is a demonstration of how to import it and implement it
 amentities = [
