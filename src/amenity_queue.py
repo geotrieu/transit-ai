@@ -3,7 +3,7 @@ import os
 from os.path import dirname as up
 
 p = city_amenity_grabber()
-c = [44.239336159212336, -76.50802137440346]
+c = [52.517759778735105, 13.405682559630677]
 # c is a coordinate in any city. c will return the name of the city, which will then pull all amenities inside of the city, in a dataframe.
 # this main function is a demonstration of how to import it and implement it
 amentities = [
@@ -15,7 +15,7 @@ amentities = [
     "university"
 ]
 for x in amentities:
-    path = os.path.join(up(up(__file__)), "res", "datasets", "csv", "kingston", f"{x}.csv")
+    path = os.path.join(up(up(__file__)), "res", "datasets", "csv", "berlin", f"{x}.csv")
     print(path)
     df = p.write_amenity_from_coords(c, x, path)
 #print(df)
