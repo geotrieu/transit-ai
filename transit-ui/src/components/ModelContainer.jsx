@@ -8,12 +8,16 @@ let yyz_lines = [];
 let yvr_lines = [];
 let yyc_lines = [];
 let ygk_lines = [];
+let bcn_lines = [];
+let ber_lines = [];
 
 for (let i = 1; i <= 10; i++) {
     yyz_lines.push(require(`../data/yyz_${i}.json`));
     yvr_lines.push(require(`../data/yvr_${i}.json`));
     yyc_lines.push(require(`../data/yyc_${i}.json`));
     ygk_lines.push(require(`../data/ygk_${i}.json`));
+    bcn_lines.push(require(`../data/bcn_${i}.json`));
+    ber_lines.push(require(`../data/ber_${i}.json`));
 }
 let current_city_lines = yyz_lines;
 
@@ -39,6 +43,16 @@ const cityDetails = {
         name: "Kingston",
         latitude: 44.24403,
         longitude: -76.51448,
+    },
+    BCN: {
+        name: "Barcelona",
+        latitude: 41.39423,
+        longitude: 2.16735,
+    },
+    BER: {
+        name: "Berlin",
+        latitude: 52.5193,
+        longitude: 13.40481,
     },
 };
 
@@ -69,6 +83,15 @@ const ModelContainer = () => {
     } else if (city == "YGK") {
         current_city_lines = ygk_lines;
         lines = ygk_lines[numLines - 1];
+<<<<<<< HEAD
+    } else if (city == "BCN") {
+        current_city_lines = bcn_lines;
+        lines = bcn_lines[numLines - 1];
+    } else if (city == "BER") {
+        current_city_lines = ber_lines;
+        lines = ber_lines[numLines - 1];
+=======
+>>>>>>> 8ef7d98bb315ee2444b8ba948520b1269b4d824c
     }
 
     return (

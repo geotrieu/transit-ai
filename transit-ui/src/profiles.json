@@ -14,18 +14,18 @@
         "email": "20pi@queensu.ca"
     },
     {
+        "img": "/profiles/cng.png",
+        "name": "Cahal Ng",
+        "program": "Computer Eng",
+        "organization": "QueensU",
+        "email": "20cn16@queensu.ca"
+    },
+    {
         "img": "/profiles/orocchi.png",
         "name": "Owen Rocchi",
         "program": "Computing",
         "organization": "QueensU",
         "email": "19omr6@queensu.ca"
-    },
-    {
-        "img": "/profiles/default.png",
-        "name": "Cahal Ng",
-        "program": "Computer Eng",
-        "organization": "QueensU",
-        "email": "20cn16@queensu.ca"
     },
     {
         "img": "/profiles/dcheng.png",
