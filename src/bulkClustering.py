@@ -42,6 +42,8 @@ def runClustering(city, STD_DEV, numClusters):
     exportClusteredGridPointsToCsv(Clustered_GridPoints, city + '_clustered_grid_points_' + str(STD_DEV) + '_' + str(numClusters))
 
 for c in range(1, 11):
-    runClustering("yyz", 0.9, c)
-    runClustering("yvr", 0.9, c)
-    runClustering("yyc", 0.9, c)
+    #runClustering("yyz", 0.9, c)
+    #runClustering("yvr", 0.9, c)
+    #runClustering("yyc", 0.9, c)
+    runClustering("ygk", 0.9, c)
+#%%
