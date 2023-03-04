@@ -7,11 +7,13 @@ import LeafletModule from "./LeafletModule";
 let yyz_lines = [];
 let yvr_lines = [];
 let yyc_lines = [];
+let ygk_lines = [];
 
 for (let i = 1; i <= 10; i++) {
     yyz_lines.push(require(`../data/yyz_${i}.json`));
     yvr_lines.push(require(`../data/yvr_${i}.json`));
     yyc_lines.push(require(`../data/yyc_${i}.json`));
+    ygk_lines.push(require(`../data/ygk_${i}.json`));
 }
 let current_city_lines = yyz_lines;
 
@@ -32,6 +34,11 @@ const cityDetails = {
         name: "Calgary",
         latitude: 51.04735,
         longitude: -114.06953,
+    },
+    YGK: {
+        name: "Kingston",
+        latitude: 44.24403,
+        longitude: -76.51448,
     },
 };
 
@@ -59,6 +66,9 @@ const ModelContainer = () => {
     } else if (city == "YYC") {
         current_city_lines = yyc_lines;
         lines = yyc_lines[numLines - 1];
+    } else if (city == "YGK") {
+        current_city_lines = ygk_lines;
+        lines = ygk_lines[numLines - 1];
     }
 
     return (
