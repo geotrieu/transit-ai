@@ -95,7 +95,7 @@ const ModelContainer = () => {
         <div className="model-container content">
             <div>
                 <h3>Transit AI Predictor</h3>
-                <p>Optimized subway lines for Toronto, Vancouver and Calgary</p>
+                <p>Optimized subway lines for large urban centres around the world</p>
             </div>
             <div>
                 <span>
