@@ -45,5 +45,7 @@ for c in range(1, 11):
     #runClustering("yyz", 0.9, c)
     #runClustering("yvr", 0.9, c)
     #runClustering("yyc", 0.9, c)
-    runClustering("ygk", 0.9, c)
+    #runClustering("ygk", 0.9, c)
+    #runClustering("bcn", 0.9, c)
+    runClustering("ber", 0.9, c)
 #%%
